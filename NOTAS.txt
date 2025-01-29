@@ -1,0 +1,50 @@
+09 max min
+
+unicamente devuelven valor minimo y maximo de lo que se les pida MAX(edad) 
+No devuelven ni se pueden combinar para conseguir nombre e edad maxima, etc.
+
+
+13 in
+
+es una manera de concatenar condiciones where and where 
+un campo que puede tomar muchos valores, in nos sirve para filtrarlo y tomar muchas condiciones al a vez
+todos los q sellamen marco y todos los que se llamen julia
+WHERE AND WHERE
+WHERE IN (cond1, cond2) 
+el in no es CASESENSITIVE
+
+
+13 BETWEEN
+
+
+combinación de mayor que y menor que 
+encuentra todos los valores que están entre los valores dados
+BETWEEN 20 AND 30
+
+15 ALIAS 
+
+AS
+cambia el nombrfe de la variable que guarda datos
+por ejemplo si quiero cambiar la columna mail y ponerle correo electrónico
+SELECT email AS 'Correo electrónico' FROM users WHERE edad = 21;
+
+Se suele combinar con CONCAT que concatena datos de distintas columnas en una columna unica (nueva)
+
+16 group by
+
+agrupa únicamente filas uncias (no rpeite datos) 
+
+comando con el que agrupamos, generalmente le ejecutamos una función antes
+SELECT MAX,MIN,AVG,ETC from users GROUUP BY age 
+
+SELECT COUNT(edad) FROM users GROUP BY age
+cuenta la cantidad de datos iguales que hat por cada edad (30 20 14 14) devbuelve 1 1 2
+
+
+17 HAVING
+ se usa cuando la función no se puede ser en funciones agragadas
+
+ es normal usarlo con funciones que agrupan 
+
+limita la cantidad 
+SELECT count (age) from users having count(age) > 4 
